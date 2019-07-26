@@ -1,0 +1,55 @@
+/**
+ * @since 2019-07-26 20:00
+ * @author vivaxy
+ */
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+:root {
+  --size: 100px;
+}
+
+.item {
+  width: var(--size);
+  height: var(--size);
+}
+
+.item:nth-child(1) {
+  background: #1abc9c;
+}
+
+.item:nth-child(2) {
+  background: #2ecc71;
+}
+
+.item:nth-child(3) {
+  background: #3498db;
+}
+
+.item:nth-child(4) {
+  background: #9b59b6;
+}
+
+.item:nth-child(5) {
+  background: #34495e;
+}
+
+.item:nth-child(6) {
+  background: #16a085;
+}
+
+.item:nth-child(7) {
+  background: #27ae60;
+}
+
+.item:nth-child(8) {
+  background: #2980b9;
+}
+
+.item:nth-child(9) {
+  background: #8e44ad;
+}

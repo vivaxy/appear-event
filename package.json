@@ -21,6 +21,8 @@
   ],
   "main": "lib/index.js",
   "scripts": {
+    "dev": "yarn dev-server --open",
+    "dev-server": "webpack-dev-server --config src/__tests__/helpers/webpack.config.js",
     "build": "tsc",
     "test": "jest",
     "coverage": "jest --collect-coverage",
@@ -50,9 +52,12 @@
     }
   },
   "jest": {
-    "preset": "ts-jest",
+    "preset": "jest-puppeteer",
     "collectCoverageFrom": [
       "src/**/*.ts"
+    ],
+    "testMatch": [
+      "**/__tests__/**/*.test.ts"
     ]
   },
   "devDependencies": {
@@ -61,11 +66,16 @@
     "@types/jest": "^24.0.15",
     "husky": "^3.0.1",
     "jest": "^24.8.0",
+    "jest-puppeteer": "^4.3.0",
     "lint-staged": "^9.2.1",
     "prettier": "^1.18.2",
+    "puppeteer": "^1.19.0",
     "standard-version": "^6.0.1",
-    "ts-jest": "^24.0.2",
-    "typescript": "^3.5.3"
+    "ts-loader": "^6.0.4",
+    "typescript": "^3.5.3",
+    "webpack": "^4.38.0",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
   },
   "dependencies": {
     "@medv/finder": "^1.1.2",
