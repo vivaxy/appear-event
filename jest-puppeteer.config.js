@@ -3,6 +3,9 @@
  * @author vivaxy
  */
 module.exports = {
+  launch: {
+    // headless: false,
+  },
   server: {
     command: 'npm run dev-server',
     port: 4444,

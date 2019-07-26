@@ -27,6 +27,9 @@ appearEvent.addDisappearEventListener($items[0], function() {
     case 2:
       document.title = 'should_disappear';
       break;
+    case 4:
+      // nothing
+      break;
     default:
       throw new Error('Unhandled testSeq: ' + testSeq);
   }

@@ -2,6 +2,13 @@
  * @since 20180911 17:16
  * @author vivaxy
  */
+
+async function sleep(timeout = 300) {
+  return new Promise(function(resolve) {
+    setTimeout(resolve, timeout);
+  });
+}
+
 beforeAll(async () => {
   await page.emulate({
     viewport: {
@@ -27,7 +34,8 @@ it('should_disappear', async () => {
   await expect(page.title()).resolves.toMatch('should_disappear');
 });
 
-// it('should_appear_again', async () => {
-//   await page.click('#should_appear_again');
-//   await expect(page.title()).resolves.toMatch('should_appear_again');
-// });
+it('should_appear_again', async () => {
+  await page.click('#should_appear_again');
+  await sleep();
+  await expect(page.title()).resolves.toMatch('should_appear_again');
+});
