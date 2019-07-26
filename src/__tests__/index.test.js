@@ -2,7 +2,6 @@
  * @since 20180911 17:16
  * @author vivaxy
  */
-
 async function sleep(timeout = 300) {
   return new Promise(function(resolve) {
     setTimeout(resolve, timeout);
@@ -10,6 +9,7 @@ async function sleep(timeout = 300) {
 }
 
 beforeAll(async () => {
+  await page.coverage.startJSCoverage();
   await page.emulate({
     viewport: {
       width: 375,
@@ -23,6 +23,12 @@ beforeAll(async () => {
       'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
   });
   await page.goto('http://localhost:4444');
+});
+
+afterAll(async function() {
+  const jsCoverage = await page.coverage.stopJSCoverage();
+  const pti = require('puppeteer-to-istanbul');
+  pti.write([...jsCoverage]);
 });
 
 it('should_appear', async () => {

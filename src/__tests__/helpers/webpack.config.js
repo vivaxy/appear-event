@@ -24,11 +24,17 @@ module.exports = {
             configFile: path.join(__dirname, 'tsconfig.json'),
           },
         },
-        exclude: [
-          /node_modules/,
-          /index\.test\.ts/,
-          path.join(projectBase, 'lib'),
-        ],
+        exclude: [/node_modules/],
+        include: [path.join(projectBase, 'src', 'index.ts')],
+      },
+      {
+        test: /\.tsx?$/,
+        exclude: [/node_modules/],
+        loader: 'istanbul-instrumenter-loader',
+        options: {
+          esModules: true,
+        },
+        include: [path.join(projectBase, 'src', 'index.ts')],
       },
     ],
   },
