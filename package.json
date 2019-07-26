@@ -26,7 +26,7 @@
     "dev-server": "webpack-dev-server --config src/__tests__/helpers/webpack.config.js",
     "build": "tsc",
     "test": "jest",
-    "coverage": "nyc report --reporter=html",
+    "coverage": "nyc report --reporter=json > coverage/coverage.json",
     "release:beta": "npm run test && npm run build && standard-version --prerelease beta && npm publish --tag beta && git push --follow-tags",
     "release": "npm run test && npm run build && standard-version && npm publish && git push --follow-tags"
   },
