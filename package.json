@@ -1,0 +1,74 @@
+{
+  "name": "appear-event",
+  "version": "0.0.0",
+  "description": "Element appear event",
+  "keywords": [
+    "appear",
+    "disappear",
+    "appear-event",
+    "disappear-event",
+    "onappear",
+    "ondisappear",
+    "html",
+    "dom",
+    "web-api",
+    "intersection-observer",
+    "custom-event",
+    "custom-events",
+    "event",
+    "events",
+    "add-event-listener"
+  ],
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "coverage": "jest --collect-coverage",
+    "release:beta": "npm run test && npm run build && standard-version --prerelease beta && npm publish --tag beta && git push --follow-tags",
+    "release": "npm run test && npm run build && standard-version && npm publish && git push --follow-tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vivaxy/appear-event.git"
+  },
+  "author": "vivaxy <xyxuye2007@126.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vivaxy/appear-event/issues"
+  },
+  "homepage": "https://github.com/vivaxy/appear-event#readme",
+  "lint-staged": {
+    "*.{js,ts,css,less,json,md,html,yml,yaml,pcss,jsx,tsx}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "collectCoverageFrom": [
+      "src/**/*.ts"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
+    "@types/jest": "^24.0.15",
+    "husky": "^3.0.1",
+    "jest": "^24.8.0",
+    "lint-staged": "^9.2.1",
+    "prettier": "^1.18.2",
+    "standard-version": "^6.0.1",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "@medv/finder": "^1.1.2",
+    "intersection-observer": "^0.7.0"
+  }
+}
