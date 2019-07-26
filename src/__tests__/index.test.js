@@ -31,6 +31,7 @@ it('should_appear', async () => {
 
 it('should_disappear', async () => {
   await page.click('#should_disappear');
+  await sleep();
   await expect(page.title()).resolves.toMatch('should_disappear');
 });
 
