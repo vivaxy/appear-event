@@ -27,11 +27,19 @@ beforeAll(async () => {
 
 afterAll(async function() {
   const jsCoverage = await page.coverage.stopJSCoverage();
-  const pti = require('puppeteer-to-istanbul');
-  pti.write([...jsCoverage]);
+  const v8toIstanbul = require('v8-to-istanbul');
+  const fse = require('fs-extra');
+  const converter = v8toIstanbul('./src/index.ts');
+  await converter.load();
+  converter.applyCoverage(jsCoverage);
+  await fse.outputFile(
+    '.nyc_output/out.json',
+    JSON.stringify(converter.toIstanbul()),
+  );
 });
 
 it('should_appear', async () => {
+  await sleep();
   await expect(page.title()).resolves.toMatch('should_appear');
 });
 

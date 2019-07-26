@@ -1,5 +1,8 @@
 {
   "extends": "../../../tsconfig.json",
+  "compilerOptions": {
+    "sourceMap": true
+  },
   "include": ["../../index.ts"],
   "exclude": ["node_modules", "../index.test.ts"]
 }

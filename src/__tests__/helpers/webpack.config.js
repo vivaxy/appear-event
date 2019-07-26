@@ -27,15 +27,6 @@ module.exports = {
         exclude: [/node_modules/],
         include: [path.join(projectBase, 'src', 'index.ts')],
       },
-      {
-        test: /\.tsx?$/,
-        exclude: [/node_modules/],
-        loader: 'istanbul-instrumenter-loader',
-        options: {
-          esModules: true,
-        },
-        include: [path.join(projectBase, 'src', 'index.ts')],
-      },
     ],
   },
   resolve: {

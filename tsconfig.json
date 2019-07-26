@@ -5,8 +5,7 @@
     "declaration": true,
     "outDir": "./lib",
     "strict": true,
-    "lib": ["dom"],
-    "sourceMap": true
+    "lib": ["dom"]
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules"]
