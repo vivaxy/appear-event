@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0](https://github.com/vivaxy/appear-event/compare/v0.1.1...v0.2.0) (2019-07-27)
+
+
+### Features
+
+* **event listeners:** :fire: remove addAppearEventListener, addDisappea ([9bae199](https://github.com/vivaxy/appear-event/commit/9bae199))
+
+
+### Tests
+
+* **test:** :white_check_mark: ([b045285](https://github.com/vivaxy/appear-event/commit/b045285))
+
+
+
 ### [0.1.1](https://github.com/vivaxy/appear-event/compare/v0.1.0...v0.1.1) (2019-07-27)
 
 
