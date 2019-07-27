@@ -2,7 +2,12 @@
 
 Element appear event.
 
-Created by [create-n](https://github.com/vivaxy/create-n).
+[![Build Status][travis-image]][travis-url]
+[![NPM Version][npm-version-image]][npm-url]
+[![NPM Downloads][npm-downloads-image]][npm-url]
+[![MIT License][license-image]][license-url]
+[![Standard Version][standard-version-image]][standard-version-url]
+[![Codecov][codecov-image]][codecov-url]
 
 # Install
 
@@ -51,12 +56,7 @@ function onDisappear(e) {
 }
 ```
 
-[![Build Status][travis-image]][travis-url]
-[![NPM Version][npm-version-image]][npm-url]
-[![NPM Downloads][npm-downloads-image]][npm-url]
-[![MIT License][license-image]][license-url]
-[![Standard Version][standard-version-image]][standard-version-url]
-[![Codecov][codecov-image]][codecov-url]
+Project created by [create-n](https://github.com/vivaxy/create-n).
 
 [travis-image]: https://img.shields.io/travis/vivaxy/appear-event.svg?style=flat-square
 [travis-url]: https://travis-ci.org/vivaxy/appear-event
