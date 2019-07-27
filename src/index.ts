@@ -78,6 +78,9 @@ function getObserving(options?: IntersectionObserverInit) {
 }
 
 export function observe(el: Element, options?: IntersectionObserverInit): void {
+  if (!el) {
+    return;
+  }
   const observing = getObserving(options);
   if (!observing.elements.includes(el)) {
     observing.intersectionObserver.observe(el);
@@ -89,6 +92,9 @@ export function unobserve(
   el: Element,
   options?: IntersectionObserverInit,
 ): void {
+  if (!el) {
+    return;
+  }
   const observing = getObserving(options);
   const { elements, intersectionObserver, serializedOptions } = observing;
   if (elements.includes(el)) {

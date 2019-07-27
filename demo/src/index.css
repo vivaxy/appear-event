@@ -1,0 +1,15 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.placeholder {
+  width: 100px;
+  height: 100px;
+}
+
+.item {
+  background: #f63;
+  color: #fff;
+}

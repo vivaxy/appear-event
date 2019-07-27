@@ -22,6 +22,7 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
+    "demo": "yarn build && cp -r lib demo/src && cd demo && yarn start && cd ..",
     "dev": "yarn dev-server --open",
     "dev-server": "webpack-dev-server --config src/__tests__/helpers/webpack.config.js",
     "build": "tsc",

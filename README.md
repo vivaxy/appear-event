@@ -45,6 +45,13 @@ unobserve(el); // unwatch for appear and disappear event
 
 `appearEvent.detail` and `disappearEvent.detail` is an [IntersectionObserveEntry](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry)
 
+## In React
+
+See [demo](./demo/src/App.js)
+Also see [jsx-native-events](https://github.com/calebdwilliams/jsx-native-events)
+
+#
+
 Project created by [create-n](https://github.com/vivaxy/create-n).
 
 [travis-image]: https://img.shields.io/travis/vivaxy/appear-event.svg?style=flat-square
