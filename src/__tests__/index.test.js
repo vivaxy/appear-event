@@ -29,7 +29,7 @@ afterAll(async function() {
   const jsCoverage = await page.coverage.stopJSCoverage();
   const v8toIstanbul = require('v8-to-istanbul');
   const fse = require('fs-extra');
-  const converter = v8toIstanbul('./src/index.ts');
+  const converter = v8toIstanbul('./src/__tests__/helpers/index.bundle.js');
   await converter.load();
   converter.applyCoverage(jsCoverage);
   await fse.outputFile(
