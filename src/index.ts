@@ -1,7 +1,7 @@
 import 'intersection-observer';
 import finder from '@medv/finder';
 
-interface OnAppearCallback {
+export interface OnAppearCallback {
   (this: Element, e: CustomEvent<IntersectionObserverEntry>): any;
 }
 
@@ -9,7 +9,7 @@ type AddAppearEventListenerOptions =
   | boolean
   | (IntersectionObserverInit & AddEventListenerOptions);
 
-const observingCollection: {
+export const observingCollection: {
   [serializedIntersectionObserverOptions: string]: {
     serializedOptions: string;
     intersectionObserver: IntersectionObserver;
