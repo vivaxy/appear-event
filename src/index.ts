@@ -1,14 +1,6 @@
 import 'intersection-observer';
 import finder from '@medv/finder';
 
-export interface OnAppearCallback {
-  (this: Element, e: CustomEvent<IntersectionObserverEntry>): any;
-}
-
-type AddAppearEventListenerOptions =
-  | boolean
-  | (IntersectionObserverInit & AddEventListenerOptions);
-
 export const observingCollection: {
   [serializedIntersectionObserverOptions: string]: {
     serializedOptions: string;
@@ -107,87 +99,4 @@ export function unobserve(
       delete observingCollection[serializedOptions];
     }
   }
-}
-
-function prepareOptions(
-  options?: AddAppearEventListenerOptions,
-): [
-  undefined | IntersectionObserverInit,
-  undefined | boolean | AddEventListenerOptions,
-] {
-  const observeOptions =
-    typeof options === 'undefined'
-      ? undefined
-      : typeof options === 'boolean'
-      ? undefined
-      : {
-          root: options.root,
-          rootMargin: options.rootMargin,
-          threshold: options.threshold,
-        };
-  const eventListenerOptions =
-    typeof options === 'undefined'
-      ? undefined
-      : typeof options === 'boolean'
-      ? options
-      : {
-          once: options.once,
-          passive: options.passive,
-          capture: options.capture,
-        };
-  return [observeOptions, eventListenerOptions];
-}
-
-export function addAppearEventListener(
-  el: Element,
-  onAppear: OnAppearCallback,
-  options?: AddAppearEventListenerOptions,
-): void {
-  const [observeOptions, eventListenerOptions] = prepareOptions(options);
-  observe(el, observeOptions);
-  el.addEventListener(
-    'appear',
-    (onAppear as unknown) as EventListenerOrEventListenerObject,
-    eventListenerOptions,
-  );
-}
-
-export function addDisappearEventListener(
-  el: Element,
-  onDisappear: OnAppearCallback,
-  options?: AddAppearEventListenerOptions,
-): void {
-  const [observeOptions, eventListenerOptions] = prepareOptions(options);
-  observe(el, observeOptions);
-  el.addEventListener(
-    'disappear',
-    (onDisappear as unknown) as EventListenerOrEventListenerObject,
-    eventListenerOptions,
-  );
-}
-
-export function removeAppearEventListener(
-  el: Element,
-  onAppear: OnAppearCallback,
-  options?: boolean | EventListenerOptions,
-): void {
-  el.removeEventListener(
-    'appear',
-    (onAppear as unknown) as EventListenerOrEventListenerObject,
-    options,
-  );
-  // todo unobserve
-}
-
-export function removeDisappearEventListener(
-  el: Element,
-  onDisappear: OnAppearCallback,
-  options?: boolean | EventListenerOptions,
-): void {
-  el.removeEventListener(
-    'disappear',
-    (onDisappear as unknown) as EventListenerOrEventListenerObject,
-    options,
-  );
-  // todo unobserve
 }

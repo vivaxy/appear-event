@@ -22,39 +22,28 @@ const { observe, unobserve } = require('appear-event');
 
 const el = getElementSomehow();
 const options = getEventListenerOptionsAndIntersectionObserverOptions();
-el.addEventListener('appear', function onAppear(e) { // or `disappear` event
-  // element appear
-  // `e` is a [CustomEvent](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent)
-  // `e.detail` is an [IntersectionObserveEntry](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry).
-}, options); // `options` can be [addEventListener options](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#Parameters) or [IntersectionObserver Properties](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver#Properties)
+
+el.addEventListener('appear', function onAppear(appearEvent) {
+  // element appeared
+}, options);
+el.addEventListener('appear', function onDisappear(disappearEvent) {
+  // element disappeared
+}, options);
 observe(el); // watch for appear and disappear event
 unobserve(el); // unwatch for appear and disappear event
 ```
 
-## `addAppearEventListener`, `addDisappearEventListener`, `removeAppearEventListener` and `removeDisappearEventListener`
+## `options`
 
-```js
-const {
-  addAppearEventListener,
-  addDisappearEventListener,
-  removeAppearEventListener,
-  removeDisappearEventListener,
-} = require('appear-event');
+[addEventListener options](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#Parameters) or [IntersectionObserver Properties](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver#Properties)
 
-const el = getElementSomehow();
-addAppearEventListener(el, onAppear, options);
-addDisappearEventListener(el, onDisappear, options);
-removeAppearEventListener(el, onAppear, options);
-removeDisappearEventListener(el, onAppear, options);
+## `appearEvent` and `disappearEvent`
 
-function onAppear(e) {
-  // element appear
-}
+[CustomEvent](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent)
 
-function onDisappear(e) {
-  // element disappear
-}
-```
+### `detail`
+
+`appearEvent.detail` and `disappearEvent.detail` is an [IntersectionObserveEntry](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry)
 
 Project created by [create-n](https://github.com/vivaxy/create-n).
 
