@@ -21,27 +21,32 @@ Element appear event.
 const { observe, unobserve } = require('appear-event');
 
 const el = getElementSomehow();
-const options = getEventListenerOptionsAndIntersectionObserverOptions();
+const eventListenerOptions = getEventListenerOptions();
+const intersectionObserverOptions = getIntersectionObserverOptions();
 
 el.addEventListener('appear', function onAppear(appearEvent) {
   // element appeared
-}, options);
-el.addEventListener('appear', function onDisappear(disappearEvent) {
+}, eventListenerOptions);
+el.addEventListener('disappear', function onDisappear(disappearEvent) {
   // element disappeared
-}, options);
-observe(el); // watch for appear and disappear event
-unobserve(el); // unwatch for appear and disappear event
+}, eventListenerOptions);
+observe(el, intersectionObserverOptions); // watch for appear and disappear event
+unobserve(el, intersectionObserverOptions); // unwatch for appear and disappear event
 ```
 
-## `options`
+### `eventListenerOptions`
 
-[addEventListener options](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#Parameters) or [IntersectionObserver Properties](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver#Properties)
+[addEventListener options](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#Parameters)
 
-## `appearEvent` and `disappearEvent`
+### `intersectionObserverOptions`
+
+[IntersectionObserver Properties](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver#Properties)
+
+### `appearEvent` and `disappearEvent`
 
 [CustomEvent](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent)
 
-### `detail`
+#### `detail`
 
 `appearEvent.detail` and `disappearEvent.detail` is an [IntersectionObserveEntry](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry)
 

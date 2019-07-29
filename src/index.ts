@@ -95,6 +95,7 @@ export function unobserve(
   if (!el) {
     return;
   }
+  // strict observing retrieving
   const observing = getObserving(options);
   const { elements, intersectionObserver, serializedOptions } = observing;
   if (elements.includes(el)) {
