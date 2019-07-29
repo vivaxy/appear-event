@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/vivaxy/appear-event/compare/v0.2.0...v0.3.0) (2019-07-29)
+
+
+### Features
+
+* **event listeners:** :sparkles: support usage for event-listeners ([9f36a1a](https://github.com/vivaxy/appear-event/commit/9f36a1a))
+
+
+
 ## [0.2.0](https://github.com/vivaxy/appear-event/compare/v0.1.1...v0.2.0) (2019-07-27)
 
 
