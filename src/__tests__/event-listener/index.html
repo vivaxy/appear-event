@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+    />
+    <meta name="author" content="vivaxy <xyxuye2007@126.com>" />
+    <meta
+      name="keywords"
+      content="vivaxy,course,demo,playground,event-listener,appear-event,appear"
+    />
+    <meta name="description" content="event-listener,appear-event,appear" />
+    <title>appear-event/event-listener</title>
+  </head>
+  <body>
+    <div id="item1"></div>
+    <div id="item2"></div>
+    <button id="addAppear1">add appear to item1</button>
+    <button id="addAppear2">add appear to item2</button>
+    <button id="removeAppear1">remove appear to item1</button>
+    <button id="removeAppear2">remove appear to item2</button>
+    <script
+      type="text/javascript"
+      src="../../../node_modules/@vivaxy/nib/index.js"
+    ></script>
+    <script>
+      window.node.init({
+        nodeBuiltInBase: "../../../node_modules/@vivaxy/nib",
+        base: "../../..",
+      });
+      window.node.require("../../../src/__tests__/event-listener/index.js");
+    </script>
+  </body>
+</html>

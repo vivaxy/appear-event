@@ -24,13 +24,19 @@ const el = getElementSomehow();
 const eventListenerOptions = getEventListenerOptions();
 const intersectionObserverOptions = getIntersectionObserverOptions();
 
-el.addEventListener('appear', function onAppear(appearEvent) {
+function onAppear(appearEvent) {
   // element appeared
-}, eventListenerOptions);
-el.addEventListener('disappear', function onDisappear(disappearEvent) {
+}
+
+function onDisappear(disappearEvent) {
   // element disappeared
-}, eventListenerOptions);
+}
+
 observe(el, intersectionObserverOptions); // watch for appear and disappear event
+el.addEventListener('appear', onAppear, eventListenerOptions);
+el.addEventListener('disappear', onDisappear, eventListenerOptions);
+el.removeEventListener('appear', onAppear, eventListenerOptions);
+el.removeEventListener('disappear', onDisappear, eventListenerOptions);
 unobserve(el, intersectionObserverOptions); // unwatch for appear and disappear event
 ```
 
@@ -49,6 +55,29 @@ unobserve(el, intersectionObserverOptions); // unwatch for appear and disappear 
 #### `detail`
 
 `appearEvent.detail` and `disappearEvent.detail` is an [IntersectionObserveEntry](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry)
+
+## event-listeners
+
+```js
+const { addAppearListener, addDisappearListener, removeAppearListener, removeDisappearListener } = require('appear-event/lib/event-listener');
+
+const el = getElementSomehow();
+const eventListenerOptions = getEventListenerOptions();
+const intersectionObserverOptions = getIntersectionObserverOptions();
+
+function onAppear(appearEvent) {
+  // element appeared
+}
+
+function onDisappear(disappearEvent) {
+  // element disappeared
+}
+
+addAppearListener(el, onAppear, { ...eventListenerOptions, ...intersectionObserverOptions });
+addDisappearListener(el, onDisappear, { ...eventListenerOptions, ...intersectionObserverOptions });
+removeAppearListener(el, onAppear, { ...eventListenerOptions, ...intersectionObserverOptions });
+removeDisappearListener(el, onDisappear, { ...eventListenerOptions, ...intersectionObserverOptions });
+```
 
 ## In React
 
