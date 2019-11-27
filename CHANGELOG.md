@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.2](https://github.com/vivaxy/appear-event/compare/v0.3.1...v0.3.2) (2019-11-27)
+
+
+### Bug Fixes
+
+* **compatiable:** :bug: fix Array.prototype.includes fails on android 4 ([c9f3b95](https://github.com/vivaxy/appear-event/commit/c9f3b95))
+
+
+
 ### [0.3.1](https://github.com/vivaxy/appear-event/compare/v0.3.0...v0.3.1) (2019-07-30)
 
 
