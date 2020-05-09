@@ -7677,10 +7677,10 @@ v8-compile-cache@2.0.3:
   resolved "https://registry.npmjs.org/v8-compile-cache/-/v8-compile-cache-2.0.3.tgz#00f7494d2ae2b688cfe2899df6ed2c54bef91dbe"
   integrity sha512-CNmdbwQMBjwr9Gsmohvm0pbL954tJrNzf6gWL3K+QMQf00PF7ERGrEiLgjuU3mKreLC2MeGhUsNV9ybTbLgd3w==
 
-v8-to-istanbul@^3.2.3:
-  version "3.2.3"
-  resolved "https://registry.npmjs.org/v8-to-istanbul/-/v8-to-istanbul-3.2.3.tgz#5978ca1120ebaf868738fd51484c15795db2f71c"
-  integrity sha512-B8d/oxMtc/x0TYXr9b+Ywu5KexA/on4QMQ9M1kTYnoGZzKdo8LLk9ySlWePdDOtr2G0/2Injgcp3sOR9gU+3vQ==
+v8-to-istanbul@^4.0.0:
+  version "4.1.4"
+  resolved "https://registry.npmjs.org/v8-to-istanbul/-/v8-to-istanbul-4.1.4.tgz#b97936f21c0e2d9996d4985e5c5156e9d4e49cd6"
+  integrity sha512-Rw6vJHj1mbdK8edjR7+zuJrpDtKIgNdAvTSAcpYfgMIw+u2dPDntD3dgN4XQFLU2/fvFQdzj+EeSGfd/jnY5fQ==
   dependencies:
     "@types/istanbul-lib-coverage" "^2.0.1"
     convert-source-map "^1.6.0"
