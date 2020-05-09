@@ -83,7 +83,7 @@
   },
   "dependencies": {
     "@medv/finder": "^1.1.2",
-    "intersection-observer": "^0.7.0"
+    "intersection-observer": "^0.10.0"
   },
   "nyc": {
     "extends": "@istanbuljs/nyc-config-typescript",
