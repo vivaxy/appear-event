@@ -610,10 +610,10 @@
   resolved "https://registry.npmjs.org/@types/yargs/-/yargs-12.0.12.tgz#45dd1d0638e8c8f153e87d296907659296873916"
   integrity sha512-SOhuU4wNBxhhTHxYaiG5NY4HBhDIDnJF60GU+2LqHAdKKer86//e4yg69aENCtQ04n0ovz+tq2YPME5t5yp4pw==
 
-"@vivaxy/nib@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.npmjs.org/@vivaxy/nib/-/nib-0.2.0.tgz#01be1c4a98f3886d7f97d325ac8d6731fb81c34c"
-  integrity sha512-tB86pcUgeXrzEVEtK7DsGU3mdwRLaT6Cmx7dHb50Va9gNOj7tOL2FkQHsCcFfUBJsMziQRsf7mNkfOKO6Diysg==
+"@vivaxy/nib@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.npmjs.org/@vivaxy/nib/-/nib-0.4.0.tgz#5d06b751b1f970bf0d6b17c89f6ff9ecf1511a9c"
+  integrity sha512-U54PvX95uJuCtrqH7fmh38MdNGxrw4iRw69yWKB14w23nWm3j6iasAbIfp8e+pmahRry/TUIkDtBvRfH5OywGw==
 
 "@webassemblyjs/ast@1.8.5":
   version "1.8.5"
