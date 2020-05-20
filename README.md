@@ -84,6 +84,12 @@ removeDisappearListener(el, onDisappear, { ...eventListenerOptions, ...intersect
 See [demo](./demo/src/App.js)
 Also see [jsx-native-events](https://github.com/calebdwilliams/jsx-native-events)
 
+## FAQ
+
+**Q:** Does zero area elements appears when they are in the screen?
+
+**A:** Yes. And if you'd like to tell if the element is a zero area element, use `event.detail.boundingClientRect` to get the element dimensions.
+
 #
 
 Project created by [create-n](https://github.com/vivaxy/create-n).

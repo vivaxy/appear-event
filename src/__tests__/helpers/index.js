@@ -8,7 +8,7 @@ import * as appearEvent from '../../index.ts';
 let testSeq = 0;
 
 const $items = document.querySelectorAll('.item');
-$items[0].addEventListener('appear', function() {
+$items[0].addEventListener('appear', function () {
   testSeq++;
   switch (testSeq) {
     case 1:
@@ -21,7 +21,7 @@ $items[0].addEventListener('appear', function() {
       throw new Error('Unhandled testSeq: ' + testSeq);
   }
 });
-$items[0].addEventListener('disappear', function() {
+$items[0].addEventListener('disappear', function () {
   testSeq++;
   switch (testSeq) {
     case 2:
@@ -35,3 +35,15 @@ $items[0].addEventListener('disappear', function() {
   }
 });
 appearEvent.observe($items[0]);
+
+// const $zeroHeight = document.getElementById('zero-height');
+// $zeroHeight.addEventListener('appear', function () {
+//   throw new Error('Should never appear');
+// });
+// appearEvent.observe($zeroHeight);
+
+// const $outOfBounds = document.getElementById('out-of-bounds');
+// $outOfBounds.addEventListener('appear', function () {
+//   throw new Error('Should never appear');
+// });
+// appearEvent.observe($outOfBounds);

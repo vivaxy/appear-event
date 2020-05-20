@@ -33,7 +33,7 @@ function serializeIntersectionObserverOptions(
     },
   };
   return Object.keys(serializer)
-    .map(function(key) {
+    .map(function (key) {
       // @ts-ignore TODO fix types
       return serializer[key](options[key]);
     })
@@ -41,14 +41,16 @@ function serializeIntersectionObserverOptions(
 }
 
 function intersectionObserverCallback(entries: IntersectionObserverEntry[]) {
-  entries.forEach(function(entry) {
-    const el = entry.target;
-    if (entry.isIntersecting) {
+  entries.forEach(function (entry) {
+    const el = entry.target as Element & { appeared?: boolean };
+    if (entry.isIntersecting && !el.appeared) {
+      el.appeared = true;
       const appearEvent = new CustomEvent<IntersectionObserverEntry>('appear', {
         detail: entry,
       });
       el.dispatchEvent(appearEvent);
-    } else {
+    } else if (el.appeared) {
+      delete el.appeared;
       const disappearEvent = new CustomEvent<IntersectionObserverEntry>(
         'disappear',
         { detail: entry },
