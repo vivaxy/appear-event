@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.3](https://github.com/vivaxy/appear-event/compare/v0.3.2...v0.3.3) (2020-05-20)
+
+
+### Bug Fixes
+
+* fix when page loads, disappear may happens ([46eff4e](https://github.com/vivaxy/appear-event/commit/46eff4e8dbc62f34d6f3cc506ee8a06bbc73ab3f))
+* **deps:** update dependency intersection-observer to ^0.10.0 ([c56834d](https://github.com/vivaxy/appear-event/commit/c56834d2d4928a11c9b3f608296940d41db24ac6))
+* **deps:** update dependency react-scripts to v3.4.1 ([67811d4](https://github.com/vivaxy/appear-event/commit/67811d42b06274f850d18416e794fc8c5a4e4de8))
+
 ### [0.3.2](https://github.com/vivaxy/appear-event/compare/v0.3.1...v0.3.2) (2019-11-27)
 
 
