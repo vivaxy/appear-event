@@ -82,7 +82,7 @@
     "webpack-dev-server": "^3.7.2"
   },
   "dependencies": {
-    "@medv/finder": "^1.1.2",
+    "@medv/finder": "^2.0.0",
     "intersection-observer": "^0.10.0"
   },
   "nyc": {
