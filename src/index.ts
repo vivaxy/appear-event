@@ -1,5 +1,5 @@
 import 'intersection-observer';
-import { finder } from '@medv/finder';
+import finder from '@medv/finder';
 
 export const observingCollection: {
   [serializedIntersectionObserverOptions: string]: {
