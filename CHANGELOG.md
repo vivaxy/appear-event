@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.5](https://github.com/vivaxy/appear-event/compare/v0.3.4...v0.3.5) (2020-05-25)
+
+
+### Bug Fixes
+
+* :bug: fix @medv/finder@2.0.0 contains es2015 codes ([4e41f92](https://github.com/vivaxy/appear-event/commit/4e41f927748001130c1be34ad642c91540da66ab))
+
 ### [0.3.4](https://github.com/vivaxy/appear-event/compare/v0.3.3...v0.3.4) (2020-05-25)
 
 
