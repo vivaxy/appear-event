@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.4](https://github.com/vivaxy/appear-event/compare/v0.3.3...v0.3.4) (2020-05-25)
+
+
+### Bug Fixes
+
+* :bug: upgrade finder ([bae65ae](https://github.com/vivaxy/appear-event/commit/bae65ae1d0553ac90974210459c5b0c1fa0e34ea))
+* **deps:** update dependency @medv/finder to v2 ([2a9e354](https://github.com/vivaxy/appear-event/commit/2a9e3546bb7352db11d5d3e25f84b4ae2b3863d9))
+
 ### [0.3.3](https://github.com/vivaxy/appear-event/compare/v0.3.2...v0.3.3) (2020-05-20)
 
 
