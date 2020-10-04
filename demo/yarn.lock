@@ -6630,10 +6630,10 @@ jsx-ast-utils@^2.2.1, jsx-ast-utils@^2.2.3:
     array-includes "^3.0.3"
     object.assign "^4.1.0"
 
-jsx-native-events@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.npmjs.org/jsx-native-events/-/jsx-native-events-1.0.2.tgz#eb02dc471d5e67338e99aa2e9b37073ecdb0a0a0"
-  integrity sha512-Tq0y2fsqmp3nGt1pqr/zHIGzaRLCilUdtVCJdthe8dbZfUayNkRqQuqZNMUCNbUXzACZf2INJmc2AVfizuxD6Q==
+jsx-native-events@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/jsx-native-events/-/jsx-native-events-2.0.0.tgz#ba94a7a419bdfe25a190709ceae9c6bb0eebb1af"
+  integrity sha512-s4jY2Sd4aYkhcoJLh4i6lzb98cxWvd9iZ8PPj9sFxC62TFrQPcchZeOl0oMgTamMu06/IXTqIjzL14czQsO1Gg==
 
 killable@^1.0.1:
   version "1.0.1"
