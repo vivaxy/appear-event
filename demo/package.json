@@ -4,8 +4,8 @@
   "private": true,
   "dependencies": {
     "jsx-native-events": "^2.0.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
     "react-scripts": "3.4.3"
   },
   "scripts": {
