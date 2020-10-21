@@ -6,7 +6,7 @@
     "jsx-native-events": "^2.0.0",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.4"
   },
   "scripts": {
     "start": "react-scripts start",
