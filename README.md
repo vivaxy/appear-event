@@ -8,6 +8,7 @@ Element appear event.
 [![MIT License][license-image]][license-url]
 [![Standard Version][standard-version-image]][standard-version-url]
 [![Codecov][codecov-image]][codecov-url]
+[![DOI](https://zenodo.org/badge/198957393.svg)](https://zenodo.org/badge/latestdoi/198957393)
 
 # Install
 
